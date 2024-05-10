@@ -1,7 +1,7 @@
 {
-	admin :2019
+	admin :{$ADMIN_PORT}
 }
 
-:80
-
-respond "Hello, port! {time.now} {env.*} {env.CADDY_ENV}"
+:{$SERVE_PORT}
+file_server
+#respond "{env.RESPONSE_TEXT} {time.now} {env.*} {env.CADDY_ENV} {method} {client_ip}"

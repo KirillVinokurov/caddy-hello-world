@@ -5,6 +5,9 @@ services:
     # entrypoint: "caddy run"
     environment:
       - CADDY_ENV=test-caddy-value
+      - ADMIN_PORT=2019
+      - SERVE_PORT=80
+      - RESPONSE_TEXT=HELLO ENV
     ports:
       - "80:80"
       - "443:443"
