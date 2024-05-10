@@ -1,0 +1,7 @@
+{
+	admin :2019
+}
+
+:80
+
+respond "Hello, port! {time.now} {env.*} {env.CADDY_ENV}"

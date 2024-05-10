@@ -1,0 +1,26 @@
+{
+    "admin": {
+        "listen": ":2019"
+    },
+    "apps": {
+        "http": {
+            "servers": {
+                "srv0": {
+                    "listen": [
+                        ":80"
+                    ],
+                    "routes": [
+                        {
+                            "handle": [
+                                {
+                                    "body": "Hello, json! {time.now} {env.*} {env.CADDY_ENV}",
+                                    "handler": "static_response"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
